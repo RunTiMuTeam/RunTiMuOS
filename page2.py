@@ -10,7 +10,7 @@ b = u.Button(text='Settings',pos=[200,400])
 m = u.Button(text='Music',pos=[200,500])
 p = u.Button(text='Power',pos=[200,600])
 def settings():
-    a.show_page('page3')
+    a.show_page('pageuacs')
 b.on_click = settings
 def refesh():
     ti.text = t.ctime()
