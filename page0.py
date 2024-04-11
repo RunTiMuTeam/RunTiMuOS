@@ -7,6 +7,10 @@ import time as t
 u.Text('RunTiMu',pos=[190,300])
 step = 0
 ggg = u.Text('Starting...',pos=[200,375])
+def nextpage():
+    a.clear_interval(nextpage)
+    a.show_page('page2')
+'''
 def step1():
     global step
     step += 1
@@ -48,3 +52,5 @@ def step2():
         s.on_click = start
 a.set_interval(step1,3)
 a.set_interval(step2,3)
+'''
+a.set_interval(nextpage,3)

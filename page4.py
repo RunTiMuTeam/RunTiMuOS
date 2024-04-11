@@ -5,7 +5,7 @@ import time as t
 
 
 u.Text(text='Version',pos=[100,100])
-u.Text(text='2.1',pos=[300,100])
+u.Text(text='3.0',pos=[300,100])
 r = u.Button(text='Back',pos=[50,50])
 def return1():
     a.show_page('page3')
