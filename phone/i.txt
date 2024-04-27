@@ -1,0 +1,1 @@
+{'CPU':'天玑700','Model':'RunTiMu Virtual Machines','Arch':'ARM64','RAM':'12GB','ROM':'VM','Core':'ybc_app,ybc_app_ui','PC Compatibility':'No'}
