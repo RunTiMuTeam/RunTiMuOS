@@ -9,15 +9,13 @@ files = os.listdir('music')
 option = u.Select(options=files,pos=[200,200])
 p = u.Button(text='Play',pos=[200,300])
 q = u.Button(text='Quit',pos=[200,400])
-'''
 def play():
     global files,option,p
-    if files == <ybc_app_ui.ybc_app_ui_impl.Select object>:
+    if option.text == '':
         p.text = 'Please choose the music.'
     else:
-        b.msgbox('Please play.',audio='music/' + option)
+        a.Music('music/' + option.text)
 p.on_click = play
-'''
 def quit1():
     a.show_page('page2')
 q.on_click = quit1

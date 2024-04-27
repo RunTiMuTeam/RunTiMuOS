@@ -5,7 +5,7 @@ import time as t
 
 
 ti = u.Text(text=t.ctime(),pos=[200,200])
-r = u.Button(text='Refesh',pos=[200,300])
+r = u.Button(text='Refesh',pos=[200,300],enable=False)
 b = u.Button(text='Settings',pos=[200,400])
 m = u.Button(text='Music',pos=[200,500])
 p = u.Button(text='Power',pos=[200,600])
@@ -21,3 +21,4 @@ p.on_click = power
 def music():
     a.show_page('page7')
 m.on_click = music
+a.set_interval(refesh,1)

@@ -4,9 +4,23 @@ import os
 import time as t
 
 
-u.Text('RunTiMu',pos=[190,300])
-step = 0
-ggg = u.Text('Starting...',pos=[200,375])
+u.Text('RunTiMu',pos=[190,300],fontsize=60)
+#step = 0
+f = open('version/new.txt')
+new = f.read()
+f.close()
+f = open('version/version.txt')
+version = f.read()
+f.close()
+if new == version:
+    state = True
+else:
+    state = False
+    u.Text('Warning!Boot Error!',pos=[200,550])
+files_list = os.listdir('phone')
+if 'model.txt' not in files_list:
+    state = False
+    u.Text("Can't know your device model.",pos=[200,650])
 def nextpage():
     a.clear_interval(nextpage)
     a.show_page('page2')
@@ -53,4 +67,5 @@ def step2():
 a.set_interval(step1,3)
 a.set_interval(step2,3)
 '''
-a.set_interval(nextpage,3)
+if state == True:
+    a.set_interval(nextpage,3)
