@@ -6,7 +6,7 @@ import ybc_box as b
 
 c = u.Button(text='Cancel',pos=[300,50])
 u.Text(text='Activate eSIM',pos=[200,200],fontsize=40)
-u.Text(text='An eSIM from RunTiMu Mobile is\nready to be activated on this device.',pos=[200,250])
+u.Text(text='An eSIM from RunTiMu Mobile is\nready to be activated on this device.\nIf setup eSIM done,\nRunTiMuOS shut down,\nafter that you should start RunTiMuOS.',pos=[200,300])
 ab = u.Button(text='Continue',pos=[200,625])
 #ddh = u.Textarea(placeholder='Please enter your esim ticket number.',pos=[200,400])
 def cancel():
@@ -26,6 +26,7 @@ def activate():
     esim_dictory = eval(f.read())
     f.close()
     ab.text = 'Activating...'
+    rq.urlretrieve('http://esim.runtimu.com.cn/numbers.txt','cache/download/numbers.txt')
     esim = a.get('esim')
     #esim = ddh.text
     #print(esim)
@@ -46,9 +47,16 @@ def activate():
             f = open('phone/esim.txt','w')
             f.write(str(d))
             f.close()
-            a.show_page('page10')
+            ab.text = 'Setup eSIM Done.'
+            f = open('data/sr.txt','w')
+            f.write('s')
+            f.close()
+            f = open('data/newesim.txt','w')
+            f.write('True')
+            f.close()
+            a.show_page('page6')
         else:
-            ab.text('This eSIM is added！')
+            ab.text = 'This eSIM is added!'
     else:
-        ab.text("This eSIM don't in RunTiMu Mobile!")
+        ab.text = "This eSIM don't in RunTiMu Mobile!"
 ab.on_click = activate

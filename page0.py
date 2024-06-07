@@ -4,7 +4,7 @@ import os
 import time as t
 
 
-u.Text('RunTiMu',pos=[190,300],fontsize=60)
+u.Text('RunTiMu',pos=[190,300],fontsize=45)
 #step = 0
 f = open('version/new.txt')
 new = f.read()

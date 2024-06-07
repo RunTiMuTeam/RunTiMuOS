@@ -5,16 +5,35 @@ import time as t
 
 
 ti = u.Text(text=t.ctime(),pos=[200,200])
-r = u.Button(text='Refesh',pos=[200,300],enable=False)
-b = u.Button(text='Settings',pos=[200,400])
-m = u.Button(text='Music',pos=[200,500])
-p = u.Button(text='Power',pos=[200,600])
+f = open('data/language.txt','r')
+language = f.read()
+f.close()
+l_s = 'Settings'
+l_m = 'Music'
+l_p = 'Power'
+if language == 'zh-CN':
+    tip = u.Text(text='目前汉化程序还未制作完毕，请见谅!',pos=[200,100])
+    l_s = '设置'
+    l_m = '音乐'
+    l_p = '电源'
+b = u.Button(text=l_s,pos=[200,300])
+m = u.Button(text=l_m,pos=[200,400])
+p = u.Button(text=l_p,pos=[200,500])
+m2 = u.Button(text='Message',pos=[200,600])
+def message():
+    a.show_page('page15')
+m2.on_click = message
 def settings():
-    a.show_page('pageuacs')
+    f = open('data/uac.txt','r')
+    tf = eval(f.read())
+    f.close()
+    if tf:
+        a.show_page('pageuacs')
+    else:
+        a.show_page('page3')
 b.on_click = settings
 def refesh():
     ti.text = t.ctime()
-r.on_click = refesh
 def power():
     a.show_page('page5')
 p.on_click = power

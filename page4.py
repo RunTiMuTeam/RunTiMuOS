@@ -5,7 +5,7 @@ import time as t
 
 
 u.Text(text='Version',pos=[100,100])
-u.Text(text='4.0',pos=[300,100])
+u.Text(text='5.0Beta1',pos=[300,100])
 f = open('phone/model.txt','r')
 model = f.read()
 f.close()
