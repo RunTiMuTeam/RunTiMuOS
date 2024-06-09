@@ -5,6 +5,9 @@ import time as t
 import urllib.request as rq
 
 
+f = open('data/nm.txt','r')
+nm = eval(f.read())
+f.close()
 f = open('data/language.txt','r')
 language = f.read()
 f.close()
@@ -53,17 +56,35 @@ def quit1():
     a.show_page('page2')
 q.on_click = quit1
 def uacsb():
-    a.show_page('page8')
-uac.on_click = uacsb
+    global nm
+    if nm:
+        a.show_page('page8')
+if nm:
+    uac.on_click = uacsb
 def uasb():
-    a.show_page('page9')
-uasb.on_click = uasb
+    global nm
+    if nm:
+        a.show_page('page9')
+if nm:
+    uasb.on_click = uasb
 def osim():
-    a.show_page('page10')
-sim.on_click = osim
+    global nm
+    if nm:
+        a.show_page('page10')
+if nm:
+    sim.on_click = osim
 def lz():
-    a.show_page('page13')
-language.on_click = lz
+    global nm
+    if nm:
+        a.show_page('page13')
+if nm:
+    language.on_click = lz
 def sbs():
-    a.show_page('page16')
-sb.on_click = sbs
+    global nm
+    if nm:
+        a.show_page('page16')
+if nm:
+    sb.on_click = sbs
+def load_ua():
+    a.show_page('page17')
+ua.on_click = load_ua

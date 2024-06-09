@@ -67,5 +67,16 @@ def step2():
 a.set_interval(step1,3)
 a.set_interval(step2,3)
 '''
+def esm():
+    f = open('data/nm.txt','w')
+    f.write('False')
+    f.close()
+    a.show_page('page2')
 if state:
+    f = open('data/nm.txt','w')
+    f.write('True')
+    f.close()
     a.set_interval(nextpage,3)
+else:
+    sm = u.Button(text='Enter Safe Mode',pos=[200,600])
+    sm.on_click = esm
