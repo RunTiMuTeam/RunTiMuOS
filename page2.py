@@ -12,7 +12,7 @@ f = open('data/nm.txt','r')
 nm = eval(f.read())
 f.close()
 l_s = 'Settings'
-l_m = 'Music'
+l_m = 'App'
 l_p = 'Power'
 l_m2 = 'Message'
 if not nm:
@@ -21,7 +21,7 @@ if language == 'zh-CN':
     if nm:
         tip = u.Text(text='目前汉化程序还未制作完毕，请见谅!',pos=[200,100])
     l_s = '设置'
-    l_m = '音乐'
+    l_m = 'App'
     l_p = '电源'
     l_m2 = '信息'
 b = u.Button(text=l_s,pos=[200,300])
@@ -38,6 +38,15 @@ def settings():
     tf = eval(f.read())
     f.close()
     if tf and nm:
+        f = open('data/uac_p.txt','w')
+        f.write('Settings')
+        f.close()
+        f = open('data/uac_pa.txt','w')
+        f.write('page3')
+        f.close()
+        f = open('data/uac_npa.txt','w')
+        f.write('page2')
+        f.close()
         a.show_page('pageuacs')
     else:
         a.show_page('page3')
@@ -50,6 +59,6 @@ p.on_click = power
 def music():
     global nm
     if nm:
-        a.show_page('page7')
+        a.show_page('page18')
 m.on_click = music
 a.set_interval(refesh,1)

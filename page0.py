@@ -12,6 +12,9 @@ f.close()
 f = open('version/version.txt')
 version = f.read()
 f.close()
+f = open('version/setup.txt')
+setup = eval(f.read())
+f.close()
 if new == version:
     state = True
 else:
@@ -22,8 +25,12 @@ if 'model.txt' not in files_list:
     state = False
     u.Text("Can't know your device model.",pos=[200,650])
 def nextpage():
+    global setup
     a.clear_interval(nextpage)
-    a.show_page('page2')
+    if setup:
+        a.show_page('pagedemo0')
+    else:
+        a.show_page('page2')
 '''
 def step1():
     global step

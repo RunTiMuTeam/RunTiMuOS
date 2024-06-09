@@ -14,7 +14,7 @@ l_v = 'Version'
 if language == 'zh-CN':
     l_v = '版本'
 u.Text(text=l_v,pos=[100,100])
-u.Text(text='7.0Beta1',pos=[300,100])
+u.Text(text='7.1Beta1',pos=[300,100])
 if nm:
     f = open('phone/model.txt','r')
     model = f.read()

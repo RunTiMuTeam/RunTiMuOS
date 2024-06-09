@@ -19,6 +19,7 @@ l_sim = 'Cellular'
 l_language = 'Language'
 l_su = 'Software Update'
 l_sb = 'SandBox'
+l_r = 'Erase all'
 if language == 'zh-CN':
     l_q = '退出'
     l_ab = '关于本机'
@@ -27,6 +28,7 @@ if language == 'zh-CN':
     l_sim = '蜂窝网络'
     l_language = '语言'
     l_sb = '沙盒'
+    l_r = '抹掉所有内容与设置'
 q = u.Button(text=l_q,pos=[300,50])
 ab = u.Button(text=l_ab,pos=[200,100])
 uac = u.Button(text=l_uac,pos=[200,150])
@@ -35,6 +37,7 @@ sim = u.Button(text=l_sim,pos=[200,250])
 language = u.Button(text=l_language,pos=[200,300])
 su = u.Button(text='Software Update',pos=[200,350])
 sb = u.Button(text=l_sb,pos=[200,400])
+rb = u.Button(text=l_r,pos=[200,450])
 def suz():
     global su
     rq.urlretrieve('http://download.runtimu.com.cn/runtimuos/update/newbeta.txt','cache/download/new.txt')
@@ -88,3 +91,6 @@ if nm:
 def load_ua():
     a.show_page('page17')
 ua.on_click = load_ua
+def rbz():
+    a.show_page('page20')
+rb.on_click = rbz
