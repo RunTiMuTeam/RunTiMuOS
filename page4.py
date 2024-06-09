@@ -4,8 +4,14 @@ import os
 import time as t
 
 
-u.Text(text='Version',pos=[100,100])
-u.Text(text='5.0Beta1',pos=[300,100])
+f = open('data/language.txt','r')
+language = f.read()
+f.close()
+l_v = 'Version'
+if language == 'zh-CN':
+    l_v = '版本'
+u.Text(text=l_v,pos=[100,100])
+u.Text(text='6.0Beta1',pos=[300,100])
 f = open('phone/model.txt','r')
 model = f.read()
 f.close()
