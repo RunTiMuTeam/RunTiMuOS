@@ -67,5 +67,5 @@ def step2():
 a.set_interval(step1,3)
 a.set_interval(step2,3)
 '''
-if state == True:
+if state:
     a.set_interval(nextpage,3)

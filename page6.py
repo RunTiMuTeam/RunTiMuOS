@@ -24,4 +24,4 @@ else:
     u.Text('Disabling Application...',pos=[200,450])
     u.Text('Done.',pos=[200,475])
     '''
-    u.Text(l_y,pos=[200,500])
+    quit()#u.Text(l_y,pos=[200,500])
