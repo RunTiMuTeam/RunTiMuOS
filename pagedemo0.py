@@ -3,8 +3,9 @@ import ybc_app_ui as u
 
 
 eusa = u.Button(text='English(United States)',pos=[200,200])
-zhcn = u.Button(text='简体中文(测试版)(Chinese Simplified(Test))',pos=[200,300])
-off = u.Button(text='Shut down',pos=[200,400])
+zhcn = u.Button(text='简体中文(Chinese Simplified)',pos=[200,300])
+zhhk = u.Button(text='繁體中文(測試版)(Chinese Traditional(Test))',pos=[200,400])
+off = u.Button(text='Shut down',pos=[200,500])
 '''
 def quit1():
     a.show_page('page3')
@@ -23,3 +24,9 @@ def zhcnz():
     a.show_page('pagedemo1')
 zhcn.on_click = zhcnz
 off.on_click = quit
+def zhhkz():
+    f = open('data/language.txt','w')
+    f.write('zh-HK')
+    f.close()
+    a.show_page('pagedemo1')
+zhhk.on_click = zhhkz

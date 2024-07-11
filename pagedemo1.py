@@ -12,6 +12,10 @@ if language == 'zh-CN':
     l_q = '返回'
     l_b = '禁用用户账户控制(不建议)'
     l_m = '启用用户账户控制'
+elif language == 'zh-HK':
+    l_q = '返回'
+    l_b = '禁用用戶帳戶控制(不建議)'
+    l_m = '啟用用戶帳戶控制'
 q = u.Button(text=l_q,pos=[50,50])
 b = u.Button(text=l_b,pos=[200,300])
 m = u.Button(text=l_m,pos=[200,400])

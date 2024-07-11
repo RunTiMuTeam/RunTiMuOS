@@ -15,6 +15,10 @@ if language == 'zh-CN':
     l_p = '播放'
     l_q = '退出'
     l_p2 = '请选择音乐!'
+elif language == 'zh-HK':
+    l_p = '播放'
+    l_q = '退出'
+    l_p2 = '請選擇音樂！'
 files = os.listdir('music')
 option = u.Select(options=files,pos=[200,200])
 p = u.Button(text=l_p,pos=[200,300])
@@ -24,7 +28,7 @@ def play():
     if option.text == '':
         p.text = l_p2
     else:
-        a.Music('music/' + option.text)
+        a.Music(option.text)
 p.on_click = play
 def quit1():
     a.show_page('page2')

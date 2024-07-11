@@ -24,6 +24,20 @@ if language == 'zh-CN':
     l_m = 'App'
     l_p = '电源'
     l_m2 = '信息'
+elif language == 'zh-HK':
+    if nm:
+        tip = u.Text(text='現時漢化程式還未製作完畢，請見諒！',pos=[200,100])
+        l_s = '設定'
+        l_m = 'App'
+        l_p = '電源'
+        l_m2 = '訊息'
+elif language == 'jp':
+    if nm:
+        tip = u.Text(text='現在、日本語の翻訳は完了していません、お許しください！',pos=[200,100])
+    l_s = '設定'
+    l_m = 'App'
+    l_p = '電源'
+    l_m2 = 'ショートメッセージ'
 b = u.Button(text=l_s,pos=[200,300])
 m = u.Button(text=l_m,pos=[200,400])
 p = u.Button(text=l_p,pos=[200,500])
@@ -46,6 +60,9 @@ def settings():
         f.close()
         f = open('data/uac_npa.txt','w')
         f.write('page2')
+        f.close()
+        f = open('data/uac_pub.txt','w')
+        f.write('RunTiMu Corporation')
         f.close()
         a.show_page('pageuacs')
     else:

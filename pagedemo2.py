@@ -14,6 +14,11 @@ if language == 'zh-CN':
     l_a = '添加eSIM'
     l_b = '设置'
     l_m = '跳过'
+elif language == 'zh-HK':
+    l_q = '返回'
+    l_a = '添加eSIM'
+    l_b = '設定'
+    l_m = '跳過'
 q = u.Button(text=l_q,pos=[50,50])
 b = u.Button(text=l_b,pos=[200,300])
 m = u.Button(text=l_m,pos=[200,400])
@@ -25,5 +30,5 @@ def lb():
     a.show_page('pagedemo3')
 b.on_click = lb
 def lm():
-    a.show_page('pagedemo4')
+    a.show_page('pagedemo5')
 m.on_click = lm

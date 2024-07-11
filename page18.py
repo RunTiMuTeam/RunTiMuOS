@@ -27,6 +27,9 @@ def li():
         f = open('data/uac_npa.txt','w')
         f.write('page18')
         f.close()
+        f = open('data/uac_pub.txt','w')
+        f.write('RunTiMu Corporation')
+        f.close()
         a.show_page('pageuacs')
     else:
         a.show_page('page19')

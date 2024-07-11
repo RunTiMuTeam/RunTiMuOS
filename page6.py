@@ -9,6 +9,8 @@ f.close()
 l_y = 'You can safely close the window.'
 if language == 'zh-CN':
     l_y = '你可以安全的关闭这个窗口了'
+elif language == 'zh-HK':
+    l_y = '你可以安全的關閉這個視窗了'
 f = open('data/sr.txt','r')
 sr = f.read()
 f.close()

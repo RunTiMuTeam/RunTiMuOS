@@ -28,6 +28,17 @@ if language == 'zh-CN':
     l_ab4 = '设置eSIM完成'
     l_ab5 = '这个eSIM已被添加'
     l_ab6 = '该eSIM可能不来自RunTiMu Mobile'
+elif language == 'zh-HK':
+    l_c = '取消'
+    l_t1 = '激活eSIM'
+    l_t2 = '一個來自RunTiMu Mobile的eSIM\n已經準備好添加到你的裝置了。'
+    l_ph1 = '請輸入付款後顯示的機會碼'
+    l_ab = '繼續'
+    l_ab2 = '正在下載配置...'
+    l_ab3 = '激活中...'
+    l_ab4 = '設定eSIM完成'
+    l_ab5 = '這個eSIM已被添加'
+    l_ab6 = '該eSIM可能不來自RunTiMu Mobile'
 c = u.Button(text=l_c,pos=[300,50])
 u.Text(text=l_t1,pos=[200,200],fontsize=40)
 u.Text(text=l_t2,pos=[200,300])
@@ -79,7 +90,7 @@ def activate():
             f = open('data/newesim.txt','w')
             f.write('True')
             f.close()
-            a.show_page('pagedemo4')
+            a.show_page('pagedemo5')
         else:
             ab.text = l_ab5
     else:

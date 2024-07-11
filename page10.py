@@ -14,6 +14,11 @@ if language == 'zh-CN':
     l_esim = '设置eSIM'
     l_rm = '删除eSIM'
     l_r = '返回'
+elif language == 'zh-HK':
+    l_ns = '你的裝置不支援實体SIM卡'
+    l_esim = '設定eSIM'
+    l_rm = '刪除eSIM'
+    l_r = '返回'
 ns = u.Text(text=l_ns,pos=[200,100])
 esim = u.Button(text=l_esim,pos=[200,200])
 rm = u.Button(text=l_rm,pos=[200,300])
